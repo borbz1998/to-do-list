@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../css/ToDoItem.css";
 
 class ToDoItem extends Component {
     render() {
@@ -10,9 +11,9 @@ class ToDoItem extends Component {
         }
         return (
             <div>
-                <div>
+                <div id="todoItem">
                     <span style={style} onClick={() => this.props.updateItemStatus(this.props.toDo.id)}>{this.props.toDo.text}</span>
-                    <span onClick={() => this.props.deleteToDoItem(this.props.toDo.id)}><span>X</span></span>
+                    <span onClick={() => this.props.deleteToDoItem(this.props.toDo.id)}><span id="deleteMark">X</span></span>
                 </div>
             </div>
         );

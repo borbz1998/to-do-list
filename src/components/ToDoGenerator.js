@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import "../css/ToDoGenerator.css";
 
 class ToDoGenerator extends Component {
 
@@ -18,7 +19,7 @@ class ToDoGenerator extends Component {
                 <form onSubmit={this.onAddToDoItem}>
                     <section>
                         <input type="text" name="toDoInput" id="toDoInput" />
-                        <input type="submit" value="Add" id="toDoSubmit" />
+                        <input type="submit" value="ADD" id="toDoSubmit" />
                     </section>
                 </form>
             </div>

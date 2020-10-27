@@ -1,0 +1,16 @@
+#todoItem{
+    color: white;
+    width:500px;
+    border:2px solid white;
+    height:35px;
+    margin:auto auto 5px;
+    text-align:left;
+    padding-left:10px;
+    background-color: black;
+}
+
+#deleteMark{
+    float:right;
+    padding-right: 10px;
+}
+
