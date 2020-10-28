@@ -4,15 +4,16 @@ import { deleteTodo,updateTodo } from '../apis/todos';
 
 class ToDoItem extends Component {
 
-    onUpdateItem = (event) => {
-        updateTodo(this.props.toDo.id).then(response => {
-            
-            const enteredName = prompt('Please enter your name')
-            this.setState({
-                text:{ enteredName }
-            });
+    onToggleToDo = () => {
+        updateTodo(this.props.toDo).then(response => {
+            this.props.updateItemStatus(response.data.id);
         })
-        
+    }
+
+    onDeleteToDo = () => {
+        deleteTodo(this.props.toDo.id).then(response => {
+            this.props.deleteToDoItem(response.data.id);
+        })
     }
 
     render() {
@@ -25,11 +26,9 @@ class ToDoItem extends Component {
         return (
             <div>
                 <div id="todoItem">
-                    <span style={style} onClick={() => this.props.updateItemStatus(this.props.toDo.id)}>{this.props.toDo.text}</span>
-                    <span onClick={() => deleteTodo(this.props.toDo.id)}><span id="deleteMark"> X </span></span>
-                    <span onClick={this.onUpdateItem}><span id="deleteMark"> Y </span></span>
-                
-
+                    {/* <span style={style} onClick={() => this.props.updateItemStatus(this.props.toDo.id)}>{this.props.toDo.text}</span> */}
+                    <span style={style} onClick={this.onToggleToDo}>{this.props.toDo.text}</span>
+                    <span onClick={this.onDeleteToDo}><span id="deleteMark"> X </span></span>
                 </div>
             </div>
         );
