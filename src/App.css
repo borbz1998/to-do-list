@@ -36,15 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.link{
-  color: white;
-}
-
-li{
-  color: yellow
-  ;
-}
-
-.link:hover {
-  color: hotpink;
-}
