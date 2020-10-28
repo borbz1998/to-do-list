@@ -18,14 +18,17 @@ class App extends React.Component {
     getTodos().then(response => {
       console.log(response.data);
       this.props.initTodos(response.data);
+    }).catch(error => {
+      console.log(error)
     })
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <BrowserRouter>
+        <header>
+        </header>
+        <BrowserRouter>
             <ul>
               <li><Link to="/" className="link"> Home Page </Link></li>
               <li><Link to="/done" className="link"> Done List Page </Link></li>
@@ -36,7 +39,6 @@ class App extends React.Component {
               <Route exact path="*" component={NotFound}></Route>
             </Switch>
           </BrowserRouter>
-        </header>
       </div>
     );
   }
