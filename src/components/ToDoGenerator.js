@@ -7,12 +7,11 @@ class ToDoGenerator extends Component {
 
     onAddToDoItem = (event) => {
         event.preventDefault();
-        addTodo(event.target.toDoInput.value).then(response => {
-            this.setState({
-                text:''
-            });
-        })
-        
+        const text = event.target.toDoInput.value
+        addTodo(text).then(response => {
+            this.props.addToDoItem(response.data);
+            event.target.toDoInput.value = "";
+        });
     }
 
     render() {
