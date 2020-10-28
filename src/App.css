@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
@@ -8,25 +8,44 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+.App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#homebg {
+  background-image: url(./css/homebg.png);
+  background-repeat: no-repeat;
+  height: 1000px;
+  margin-top:5px;
 }
 
 .App-link {
   color: #61dafb;
 }
+
+#todoList{
+position: absolute;
+top: 250px;
+left: 700px; 
+
+}
+
+.scrollbar {
+  overflow: scroll;
+  max-height: 700px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +54,9 @@
   to {
     transform: rotate(360deg);
   }
+
+
+
+
+
 }
