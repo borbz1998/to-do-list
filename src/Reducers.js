@@ -15,17 +15,7 @@ const toDos = (state = [], action) => {
 
     case "INIT_TODO":
       return action.payload;
-
-    case "UPDATE_TODO":
-      const toDo = state.filter(toDo => toDo.id !== action.payload);
-      // return toDo;
-      return {
-        ...state, items : state.items.map( item => 
-          item._id === action.payload.id
-            ? action.payload
-            : item)
-      }
-
+      
     default:
       return state;
   }
