@@ -30,9 +30,14 @@ top: 220px;
 left: 650px; 
 }
 
+#done{
+  margin-top: 160px;
+}
+  
+
 .scrollbar {
   overflow: scroll;
-  max-height: 700px;
+  max-height: 500px;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -55,8 +60,8 @@ left: 650px;
   }
 }
 Table {
-  color: #97BC62FF;
-  background-color: #32595E;
+  color: rgb(83, 83, 83);
+  background-color: #32595e8c;
 }
 
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DoneListContainer from '../containers/DoneListContainer';
 import { Table } from 'antd';
 
 class DoneList extends Component {
@@ -19,10 +18,9 @@ class DoneList extends Component {
             }];
 
         return (
-            <div>
-                <ul>
-                    <Table dataSource={this.props.doneItems} columns={columns} />
-                </ul>
+            <div >
+                    <Table  id="done" dataSource={this.props.doneItems} 
+                    columns={columns} />
             </div>
         );
     }
