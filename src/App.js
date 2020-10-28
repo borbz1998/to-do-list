@@ -8,6 +8,9 @@ import { initTodos } from './Actions';
 import { connect } from 'react-redux';
 import React, { } from 'react';
 import { Menu } from 'antd';
+import { UnorderedListOutlined,CheckSquareOutlined } from '@ant-design/icons';
+
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -28,9 +31,9 @@ class App extends React.Component {
       <div className="App">
        
         <BrowserRouter>
-          <Menu mode='horizontal'>
-            <Menu.Item> <Link to="/" className="link"> Home Page </Link></Menu.Item>
-            <Menu.Item><Link to="/done" className="link"> Done List Page </Link> </Menu.Item>
+          <Menu mode="horizontal" defaultSelectedKeys={['home']}>
+            <Menu.Item key="home" icon={<UnorderedListOutlined />}> <Link to="/" className="link"> Home Page </Link></Menu.Item>
+            <Menu.Item key="done" icon={<CheckSquareOutlined />}><Link to="/done" className="link"> Done List Page </Link> </Menu.Item>
           </Menu>
           <div id="homebg">
           <Switch>
