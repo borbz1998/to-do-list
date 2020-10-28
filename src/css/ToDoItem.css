@@ -1,12 +1,12 @@
 #todoItem{
     color: white;
-    width:500px;
+    width:600px;
     border:2px solid white;
     height:35px;
-    margin:auto auto 5px;
-    text-align:left;
+    text-align:center;
     padding-left:10px;
-    background-color: black;
+    margin-top: 5px;
+    background-color: #32595E;
 }
 
 #deleteMark{
