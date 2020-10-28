@@ -26,7 +26,6 @@ class ToDoItem extends Component {
         return (
             <div>
                 <div id="todoItem">
-                    {/* <span style={style} onClick={() => this.props.updateItemStatus(this.props.toDo.id)}>{this.props.toDo.text}</span> */}
                     <span style={style} onClick={this.onToggleToDo}>{this.props.toDo.text}</span>
                     <span onClick={this.onDeleteToDo}><span id="deleteMark"> X </span></span>
                 </div>
