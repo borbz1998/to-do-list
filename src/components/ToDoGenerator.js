@@ -21,7 +21,7 @@ class ToDoGenerator extends Component {
             <div >
                 <form onSubmit={this.onAddToDoItem} >
                     <section >
-                        <Input  placeholder="input todo here..."  type="text"  allowClear />
+                        <Input  placeholder="input todo here..."  type="text" name="toDoInput" allowClear />
                         <Button htmlType="submit" id="toDoSubmit" shape="circle" icon={<PlusOutlined />} size='large' />
                     </section>
                 </form>
