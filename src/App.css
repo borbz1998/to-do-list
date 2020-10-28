@@ -22,8 +22,8 @@
 
 #errorFont{
   position: absolute;
-  bottom: 350px;
-  left: 200px;
+  bottom: 400px;
+  left: 130px;
   font-size: 150px;
   color: red;
 }
@@ -31,11 +31,9 @@
 #error{
   background-image: url(./css/error2.png);
   /* background-size: 1000px; */
-  width: 2130px;
-  height: 1020px;
+  width: 1900px;
+  height: 1000px;
   position: absolute;
-
-
 }
 
 
