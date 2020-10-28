@@ -1,13 +1,3 @@
-#toDoInput {
-    background-color: white;
-    color: black;
-    text-align:center;
-    height:30px;
-    border:none;
-    font-size:25px;
-    margin-top: 20px;
-}
-
 #toDoSubmit{
     color: white;
     display:inline-block;
