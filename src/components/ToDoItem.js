@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../css/ToDoItem.css";
 import { deleteTodo,updateTodo } from '../apis/todos';
+import { CloseCircleOutlined } from '@ant-design/icons';
 
 class ToDoItem extends Component {
 
@@ -27,7 +28,7 @@ class ToDoItem extends Component {
             <div>
                 <div id="todoItem">
                     <span style={style} onClick={this.onToggleToDo}>{this.props.toDo.text}</span>
-                    <span onClick={this.onDeleteToDo}><span id="deleteMark"> X </span></span>
+                    <span onClick={this.onDeleteToDo}><span id="deleteMark"><CloseCircleOutlined /></span></span>
                 </div>
             </div>
         );
