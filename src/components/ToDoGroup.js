@@ -7,7 +7,7 @@ class ToDoGroup extends Component {
             <ToDoItemContainer key={toDo.id} toDo={toDo} />
         ));
         return (
-            <div>
+            <div className="scrollbar">
                 {toDos}
             </div>
         );
