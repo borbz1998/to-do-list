@@ -7,7 +7,7 @@ import { getTodos } from './apis/todos';
 import { initTodos } from './Actions';
 import { connect } from 'react-redux';
 import React, { } from 'react';
-
+import { Menu } from 'antd';
 class App extends React.Component {
 
   componentDidMount() {
@@ -26,19 +26,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header>
-        </header>
+       
         <BrowserRouter>
-            <ul>
-              <li><Link to="/" className="link"> Home Page </Link></li>
-              <li><Link to="/done" className="link"> Done List Page </Link></li>
-            </ul>
-            <Switch>
-              <Route exact path="/" component={ToDoList}></Route>
-              <Route exact path="/done" component={DoneListContainer}></Route>
-              <Route exact path="*" component={NotFound}></Route>
-            </Switch>
-          </BrowserRouter>
+          <Menu mode='horizontal'>
+            <Menu.Item> <Link to="/" className="link"> Home Page </Link></Menu.Item>
+            <Menu.Item><Link to="/done" className="link"> Done List Page </Link> </Menu.Item>
+          </Menu>
+          <div id="homebg">
+          <Switch>
+            <Route exact path="/" component={ToDoList}></Route>
+            <Route exact path="/done" component={DoneListContainer}></Route>
+            <Route exact path="*" component={NotFound}></Route>
+          </Switch>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
