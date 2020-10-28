@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import { combineReducers } from "redux";
 
 const toDos = (state = [], action) => {
@@ -11,6 +12,19 @@ const toDos = (state = [], action) => {
 
     case "UPDATE_STATUS":
       return state.map(toDo => toDo.id === action.payload ? { ...toDo, status: !toDo.status } : toDo);
+
+    case "INIT_TODO":
+      return action.payload;
+
+    case "UPDATE_TODO":
+      const toDo = state.filter(toDo => toDo.id !== action.payload);
+      // return toDo;
+      return {
+        ...state, items : state.items.map( item => 
+          item._id === action.payload.id
+            ? action.payload
+            : item)
+      }
 
     default:
       return state;
