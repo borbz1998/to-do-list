@@ -54,9 +54,10 @@ left: 700px;
   to {
     transform: rotate(360deg);
   }
-
-
-
-
-
 }
+Table {
+  color: #97BC62FF;
+  background-color: #32595E;
+}
+
+
