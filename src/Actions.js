@@ -15,3 +15,18 @@ export const deleteToDoItem = (id) => {
         type: "DELETE_TODO", payload: id
     };
 }
+export const updateTodoItem = (toDo) => {
+    return {
+        type: "UPDATE_TODO", payload: toDo
+    };
+}
+
+export const initTodos = todos => {
+    return {
+        type: "INIT_TODO", payload: todos
+    };
+
+
+
+    
+}
