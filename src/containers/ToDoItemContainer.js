@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { deleteToDoItem, updateItemStatus } from '../actions';
+import { deleteToDoItem, updateItemStatus } from '../Actions';
 import ToDoItem from '../components/ToDoItem';
 
 const mapDispatchToProps = dispatch => ({
