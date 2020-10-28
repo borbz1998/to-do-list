@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { addTodo } from '../apis/todos';
 import "../css/ToDoGenerator.css";
 import { Input } from 'antd';
+import { Button } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 
 class ToDoGenerator extends Component {
 
@@ -20,8 +22,7 @@ class ToDoGenerator extends Component {
                 <form onSubmit={this.onAddToDoItem} >
                     <section >
                         <Input  placeholder="input todo here..."  type="text"  allowClear />
-                        <input type="submit"id="toDoSubmit">
-                        </input>
+                        <Button htmlType="submit" id="toDoSubmit" shape="circle" icon={<PlusOutlined />} size='large' />
                     </section>
                 </form>
             </div>

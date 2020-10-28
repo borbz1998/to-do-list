@@ -52,5 +52,4 @@ const mapDispatchToProps = dispatch => ({
   initTodos: todos => dispatch(initTodos(todos))
 })
 
-
 export default connect(null, mapDispatchToProps)(App);
