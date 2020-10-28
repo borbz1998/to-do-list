@@ -18,8 +18,6 @@ class DoneList extends Component {
                 render: text => <b>{text}</b>,
             }];
 
-        // const doneList = this.props.doneItems.map((toDo) => 
-        // <li DoneListContainer key={toDo.id}>{toDo.text}</li>);
         return (
             <div>
                 <ul>

@@ -16,12 +16,12 @@ class ToDoGenerator extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.onAddToDoItem}>
-                    <section>
-                        <Input placeholder="input todo here..."  type="text" 
-                        name="toDoInput" id="toDoInput" allowClear />
-                        <input type="submit" value="ADD" id="toDoSubmit" />
+            <div >
+                <form onSubmit={this.onAddToDoItem} >
+                    <section >
+                        <Input  placeholder="input todo here..."  type="text"  allowClear />
+                        <input type="submit"id="toDoSubmit">
+                        </input>
                     </section>
                 </form>
             </div>
