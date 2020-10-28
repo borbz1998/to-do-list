@@ -1,6 +1,7 @@
 import './App.css';
 import ToDoList from './components/ToDoList';
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import DoneListContainer from './containers/DoneListContainer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <li><Link to="/done" className="color"> Done List Page </Link></li>
           </ul>
           <Route exact path="/" component={ToDoList}></Route>
+          <Route exact path="/done" component={DoneListContainer}></Route>
         </BrowserRouter>
         </header>
     </div>
