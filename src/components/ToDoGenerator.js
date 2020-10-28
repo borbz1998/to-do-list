@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { addTodo } from '../apis/todos';
 import "../css/ToDoGenerator.css";
+import { Input } from 'antd';
 
 class ToDoGenerator extends Component {
 
@@ -19,7 +19,8 @@ class ToDoGenerator extends Component {
             <div>
                 <form onSubmit={this.onAddToDoItem}>
                     <section>
-                        <input type="text" name="toDoInput" id="toDoInput" />
+                        <Input placeholder="input todo here..."  type="text" 
+                        name="toDoInput" id="toDoInput" allowClear />
                         <input type="submit" value="ADD" id="toDoSubmit" />
                     </section>
                 </form>
