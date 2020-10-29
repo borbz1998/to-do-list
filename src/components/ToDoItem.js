@@ -17,7 +17,7 @@ class ToDoItem extends Component {
     }
 
     render() {
-        const todoIsDone = this.props.toDo.status;
+        const todoIsDone = this.props.toDo.done;
 
         const style = {
             textDecoration: todoIsDone ? 'line-through' : '',

@@ -7,4 +7,4 @@ export const addTodo = text => (api.post('/todos',{text}))
  
 export const deleteTodo = id => (api.delete(`/todos/${id}`))
 
-export const updateTodo = ({id, status}) => (api.put(`/todos/${id}`, { status: !status }))
+export const updateTodo = ({id, done}) => (api.put(`/todos/${id}`, { done: !done }))

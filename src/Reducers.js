@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import { combineReducers } from "redux";
 
 const toDos = (state = [], action) => {
@@ -7,11 +6,10 @@ const toDos = (state = [], action) => {
       return [...state, action.payload];
 
     case "DELETE_TODO":
-      const toDos = state.filter(toDo => toDo.id !== action.payload);
-      return toDos;
+      return state.filter(toDo => toDo.id !== action.payload);
 
     case "UPDATE_STATUS":
-      return state.map(toDo => toDo.id === action.payload ? { ...toDo, status: !toDo.status } : toDo);
+      return state.map(toDo => toDo.id === action.payload ? { ...toDo, done: !toDo.done } : toDo);
 
     case "INIT_TODO":
       return action.payload;
