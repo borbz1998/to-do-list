@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "../css/ToDoItem.css";
 import { deleteTodo,updateTodo } from '../apis/todos';
 import { CloseCircleOutlined } from '@ant-design/icons';
 

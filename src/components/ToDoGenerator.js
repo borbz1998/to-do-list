@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { addTodo } from '../apis/todos';
-import "../css/ToDoGenerator.css";
 import { Input } from 'antd';
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
