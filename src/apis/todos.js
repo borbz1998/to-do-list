@@ -1,10 +1,10 @@
 import api from "./api";
 export const getTodos = () => {
-    return api.get('/api/todos')
+    return api.get('/todos')
 } 
 
-export const addTodo = text => (api.post('/api/todos',{text}))
+export const addTodo = text => (api.post('/todos',{text}))
  
-export const deleteTodo = id => (api.delete(`/api/todos/${id}`))
+export const deleteTodo = id => (api.delete(`/todos/${id}`))
 
-export const updateTodo = ({id, status}) => (api.put(`/api/todos/${id}`, { status: !status }))
+export const updateTodo = ({id, status}) => (api.put(`/todos/${id}`, { status: !status }))
